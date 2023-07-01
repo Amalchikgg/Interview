@@ -138,8 +138,8 @@ export const Home = () => {
                         <li className='li' key={customer.id}>
                             <span><img style={{width: 20, height: 20}} src={customer.avatar} alt="" /> {customer.name}</span>
                             <span>{customer.company}</span>
-                            <span>{customer.email}</span>
-                            {customer.status == 'user' ? <span className='user'></span> : <span className='administrator'></span>}
+                            <span className='email'>{customer.email}</span>
+                            {customer.status == 'user' ? <span style={{width: 80}} className='user'></span> : <span style={{width: 80}} className='administrator'></span>}
                             <span className=''><Link to={`/edit/${customer.id}`}><img src={Edit} alt="" /></Link> <img onClick={() => removeCustomer(customer.id)} src={Trash}/></span>
                         </li>
                     )
