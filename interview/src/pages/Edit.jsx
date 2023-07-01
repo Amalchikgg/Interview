@@ -11,19 +11,16 @@ export const Edit = () => {
     const [lastName, setLastname] = React.useState(customer.lastName);
     const [company, setCompany] = React.useState(customer.company);
     const [email, setEmail] = React.useState(customer.email);
-    const [password, setPassword] = React.useState(customer.password);
     const [status, setStatus] = React.useState(customer.status);
     const [activeClass, setActiveClass] = React.useState(0);
     const tabs = ['user', 'administrator'];
-
-    //console.log(customer);
 
     const updateCustomer = (e) => {
         e.preventDefault();
         customer.name = name;
         customer.lastName = lastName;
         customer.status = status;
-        customer.comapny = company;
+        customer.company = company;
         customer.email = email;
         localStorage.setItem('customer', JSON.stringify(token));
     }
